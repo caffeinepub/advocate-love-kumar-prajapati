@@ -1385,21 +1385,22 @@ const TEAM = [
   },
   {
     name: "ADV Umesh Varma",
-    role: "Advocate",
+    role: "Senior Advocate",
     phone: "9827189494",
     photo: "/assets/uploads/WhatsApp-Image-2026-03-23-at-2.09.25-PM-1.jpeg",
   },
   {
     name: "Ayush Varma",
-    role: "Advocate",
+    role: "Senior Advocate",
     phone: "9826561474",
-    photo: "/assets/uploads/download-1-2.webp",
+    photo: "/assets/uploads/download-1.webp",
   },
   {
-    name: "Vivek Varma",
-    role: "Advocate",
+    name: "Vivek Sharma",
+    role: "Senior Advocate",
     phone: "8770496240",
-    photo: "/assets/uploads/download-1.webp",
+    photo:
+      "/assets/uploads/download-019d1b9f-84f9-74fa-a260-8b17977ffc77-1.webp",
   },
 ];
 
