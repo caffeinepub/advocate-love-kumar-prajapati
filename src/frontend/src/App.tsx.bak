@@ -121,7 +121,6 @@ function Navbar({ onAdminClick }: { onAdminClick: () => void }) {
   const navLinks = [
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
-    { label: "Our Team", id: "team" },
     { label: "Practice Areas", id: "practice" },
     { label: "Appointment", id: "appointment" },
     { label: "Contact", id: "contact" },
@@ -145,14 +144,13 @@ function Navbar({ onAdminClick }: { onAdminClick: () => void }) {
           data-ocid="nav.link"
         >
           <div
-            className="w-10 h-10 rounded-full overflow-hidden border-2"
-            style={{ borderColor: "oklch(0.73 0.12 85)" }}
+            className="w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-sm"
+            style={{
+              background: "oklch(0.73 0.12 85)",
+              color: "oklch(0.13 0.03 245)",
+            }}
           >
-            <img
-              src="/assets/uploads/high-court-2.jpeg"
-              alt="High Court Chhattisgarh"
-              className="w-full h-full object-cover"
-            />
+            LK
           </div>
           <div className="hidden sm:block">
             <div
@@ -327,7 +325,8 @@ function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/assets/uploads/high-court-2.jpeg')",
+          backgroundImage:
+            "url('/assets/generated/hero-legal-bg.dim_1920x1080.jpg')",
         }}
       />
       <div
@@ -500,16 +499,16 @@ function About() {
             <div className="grid md:grid-cols-2 gap-12 mt-8 items-center">
               <div>
                 <div
-                  className="aspect-square max-w-xs mx-auto rounded-none border-2 overflow-hidden"
+                  className="aspect-square max-w-xs mx-auto rounded-none border-2 flex items-center justify-center"
                   style={{
                     borderColor: "oklch(0.73 0.12 85 / 0.4)",
                     background: "oklch(0.17 0.035 248)",
                   }}
                 >
                   <img
-                    src="/assets/uploads/WhatsApp-Image-2026-03-23-at-2.10.04-PM-2.jpeg"
-                    alt="Adv. Love Kumar Prajapati"
-                    className="w-full h-full object-cover"
+                    src="/assets/generated/scales-justice-icon-transparent.dim_200x200.png"
+                    alt="Scales of Justice"
+                    className="w-48 h-48 object-contain"
                   />
                 </div>
               </div>
@@ -1375,129 +1374,6 @@ function AdminDashboard({ onClose }: { onClose: () => void }) {
   );
 }
 
-// ────────── Our Team ──────────
-const TEAM = [
-  {
-    name: "Adv. Love Kumar Prajapati",
-    role: "Senior Advocate",
-    phone: "9131178255",
-    photo: "/assets/uploads/love09-3.jpeg",
-  },
-  {
-    name: "ADV Umesh Varma",
-    role: "Advocate",
-    phone: "9827189494",
-    photo: "/assets/uploads/WhatsApp-Image-2026-03-23-at-2.09.25-PM-1.jpeg",
-  },
-  {
-    name: "Ayush Varma",
-    role: "Advocate",
-    phone: "9826561474",
-    photo: "/assets/uploads/download-1-2.webp",
-  },
-  {
-    name: "Vivek Varma",
-    role: "Advocate",
-    phone: "8770496240",
-    photo: "/assets/uploads/download-1.webp",
-  },
-];
-
-function OurTeam() {
-  return (
-    <section
-      id="team"
-      className="py-24"
-      style={{ background: "oklch(0.13 0.03 245)" }}
-    >
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <p
-            className="text-xs font-semibold uppercase tracking-widest mb-2"
-            style={{ color: "oklch(0.73 0.12 85)" }}
-          >
-            Meet the Team
-          </p>
-          <h2 className="section-title">Our Legal Professionals</h2>
-          <div className="gold-divider" />
-        </motion.div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {TEAM.map((member, i) => (
-            <motion.div
-              key={member.phone}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="rounded-none border text-center p-6 flex flex-col items-center gap-4"
-              style={{
-                background: "oklch(0.17 0.035 248)",
-                borderColor: "oklch(0.25 0.04 250)",
-              }}
-              data-ocid={`team.item.${i + 1}`}
-            >
-              <div
-                className="w-36 h-36 rounded-none border-2 overflow-hidden flex-shrink-0"
-                style={{ borderColor: "oklch(0.73 0.12 85 / 0.6)" }}
-              >
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div>
-                <h3
-                  className="font-serif text-lg font-semibold"
-                  style={{ color: "oklch(0.73 0.12 85)" }}
-                >
-                  {member.name}
-                </h3>
-                <p
-                  className="text-sm mt-1"
-                  style={{ color: "oklch(0.58 0.02 255)" }}
-                >
-                  {member.role}
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 w-full">
-                <a
-                  href={`tel:${member.phone}`}
-                  className="flex items-center justify-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity"
-                  style={{ color: "oklch(0.73 0.12 85)" }}
-                  data-ocid={"team.link"}
-                >
-                  <Phone className="w-4 h-4" /> {member.phone}
-                </a>
-                <a
-                  href={`https://wa.me/91${member.phone}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 text-xs font-semibold px-4 py-2 rounded-none border transition-colors hover:opacity-90"
-                  style={{
-                    background: "oklch(0.73 0.12 85 / 0.12)",
-                    borderColor: "oklch(0.73 0.12 85 / 0.4)",
-                    color: "oklch(0.73 0.12 85)",
-                  }}
-                  data-ocid={"team.button"}
-                >
-                  WhatsApp
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // ────────── Footer ──────────
 function Footer() {
   const year = new Date().getFullYear();
@@ -1515,14 +1391,13 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div
-                className="w-10 h-10 rounded-full overflow-hidden border-2"
-                style={{ borderColor: "oklch(0.73 0.12 85)" }}
+                className="w-10 h-10 rounded-full flex items-center justify-center font-serif font-bold text-sm"
+                style={{
+                  background: "oklch(0.73 0.12 85)",
+                  color: "oklch(0.13 0.03 245)",
+                }}
               >
-                <img
-                  src="/assets/uploads/high-court-2.jpeg"
-                  alt="High Court Chhattisgarh"
-                  className="w-full h-full object-cover"
-                />
+                LK
               </div>
               <div>
                 <div
@@ -1554,30 +1429,23 @@ function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {[
-                "home",
-                "about",
-                "team",
-                "practice",
-                "appointment",
-                "contact",
-              ].map((id) => (
-                <li key={id}>
-                  <button
-                    type="button"
-                    onClick={() => scrollTo(id)}
-                    className="text-xs uppercase tracking-wider hover:text-gold transition-colors"
-                    style={{ color: "oklch(0.58 0.02 255)" }}
-                    data-ocid="footer.link"
-                  >
-                    {id === "practice"
-                      ? "Practice Areas"
-                      : id === "team"
-                        ? "Our Team"
+              {["home", "about", "practice", "appointment", "contact"].map(
+                (id) => (
+                  <li key={id}>
+                    <button
+                      type="button"
+                      onClick={() => scrollTo(id)}
+                      className="text-xs uppercase tracking-wider hover:text-gold transition-colors"
+                      style={{ color: "oklch(0.58 0.02 255)" }}
+                      data-ocid="footer.link"
+                    >
+                      {id === "practice"
+                        ? "Practice Areas"
                         : id.charAt(0).toUpperCase() + id.slice(1)}
-                  </button>
-                </li>
-              ))}
+                    </button>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
@@ -1662,7 +1530,6 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <OurTeam />
         <PracticeAreas />
         <AppointmentForm />
         <Contact />
