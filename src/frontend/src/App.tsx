@@ -159,13 +159,13 @@ function Navbar({ onAdminClick }: { onAdminClick: () => void }) {
               className="text-xs font-semibold tracking-widest uppercase"
               style={{ color: "oklch(0.73 0.12 85)" }}
             >
-              Advocate
+              Justice Point
             </div>
             <div
               className="text-sm font-bold tracking-wide uppercase"
               style={{ color: "oklch(0.93 0.01 260)" }}
             >
-              Love Kumar Prajapati
+              Chamber
             </div>
           </div>
         </button>
@@ -370,9 +370,9 @@ function Hero() {
               textShadow: "0 0 40px oklch(0.73 0.12 85 / 0.3)",
             }}
           >
-            Advocate
+            Justice Point
             <br />
-            Love Kumar Prajapati
+            Chamber
           </h1>
 
           {/* Divider */}
@@ -518,10 +518,7 @@ function About() {
                   className="text-base leading-relaxed"
                   style={{ color: "oklch(0.78 0.02 255)" }}
                 >
-                  Advocate Love Kumar Prajapati is a distinguished legal
-                  professional based in Bilaspur, Chhattisgarh, with over 15
-                  years of dedicated practice in diverse areas of law. Known for
-                  unwavering commitment to justice and client-first approach.
+                  Justice Point Chamber
                 </p>
                 <p
                   className="text-base leading-relaxed"
@@ -1378,16 +1375,17 @@ function AdminDashboard({ onClose }: { onClose: () => void }) {
 // ────────── Our Team ──────────
 const TEAM = [
   {
-    name: "Adv. Love Kumar Prajapati",
-    role: "Senior Advocate",
-    phone: "9131178255",
-    photo: "/assets/uploads/love09-3.jpeg",
-  },
-  {
     name: "ADV Umesh Varma",
     role: "Senior Advocate",
     phone: "9827189494",
     photo: "/assets/uploads/WhatsApp-Image-2026-03-23-at-2.09.25-PM-1.jpeg",
+  },
+  {
+    name: "Vivek Sharma",
+    role: "Senior Advocate",
+    phone: "8770496240",
+    photo:
+      "/assets/uploads/download-019d1b9f-84f9-74fa-a260-8b17977ffc77-1.webp",
   },
   {
     name: "Ayush Varma",
@@ -1396,11 +1394,10 @@ const TEAM = [
     photo: "/assets/uploads/download-1.webp",
   },
   {
-    name: "Vivek Sharma",
+    name: "Adv. Love Kumar Prajapati",
     role: "Senior Advocate",
-    phone: "8770496240",
-    photo:
-      "/assets/uploads/download-019d1b9f-84f9-74fa-a260-8b17977ffc77-1.webp",
+    phone: "9131178255",
+    photo: "/assets/uploads/love09-3.jpeg",
   },
 ];
 
@@ -1530,13 +1527,13 @@ function Footer() {
                   className="text-xs font-semibold tracking-widest uppercase"
                   style={{ color: "oklch(0.73 0.12 85)" }}
                 >
-                  Advocate
+                  Justice Point
                 </div>
                 <div
                   className="text-sm font-bold"
                   style={{ color: "oklch(0.93 0.01 260)" }}
                 >
-                  Love Kumar Prajapati
+                  Chamber
                 </div>
               </div>
             </div>
@@ -1622,7 +1619,7 @@ function Footer() {
           style={{ borderColor: "oklch(0.73 0.12 85 / 0.15)" }}
         >
           <p className="text-xs" style={{ color: "oklch(0.45 0.02 255)" }}>
-            © {year} Advocate Love Kumar Prajapati. All rights reserved.
+            © {year} Justice Point Chamber. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: "oklch(0.45 0.02 255)" }}>
             Built with ❤️ using{" "}
